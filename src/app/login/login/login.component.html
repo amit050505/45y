@@ -1,0 +1,27 @@
+<div class="container">
+  
+  <div class="login-wrapper">
+      
+      <kendo-dialog title="Log In" *ngIf="opened"  [minWidth]="250" [width]="450">
+          <p style="text-align: left;">Please fill in your login details.</p>
+          <div>
+              <table  style="margin-left:auto; margin-right:auto;">
+                <tr>
+                    <td>Username:</td>    
+                    <td><input kendoTextBox [(ngModel)]="username" /></td>    
+                </tr>  
+                <tr>
+                    <td>Password:</td>    
+                    <td><input type="password" kendoTextBox [(ngModel)]="password" /></td>    
+                </tr>  
+              </table>                            
+          </div>
+
+          <kendo-dialog-actions>
+              <button kendoButton >Cancel</button>
+              <button kendoButton primary="true" (click)="login()">Log In</button>
+          </kendo-dialog-actions>
+
+      </kendo-dialog>
+  </div>
+</div>
